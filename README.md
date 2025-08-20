@@ -88,6 +88,17 @@ The script:
 - Removes itself and the provisioning service after completion
 - This ensures containers are not only set up but also clean of setup tools afterward.
 
+## Troubleshooting
+
+You may need to stop and destroy the LXC from the root shell, if it doesnt provision correctley
+
+```bash
+   lxc-stop <VMID>
+```
+```bash
+   pct destroy <VMID>
+```
+
 ## 🔍 Viewing Setup Logs
 
 To view logs from the setup process (to verify or debug):
