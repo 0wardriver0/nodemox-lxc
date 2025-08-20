@@ -1,0 +1,12 @@
+[Unit]
+Description=Run initial setup script once
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/root/setup.sh
+TimeoutSec=300
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
